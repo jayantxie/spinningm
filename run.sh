@@ -13,7 +13,7 @@ GOGC=1000 taskset -c 4-15 nohup ./spiningm_client -n=10000000 -con=4 &
 CLIENT_PID=`ps -ef | grep spiningm_client | grep -v grep | awk '{print $2}'`
 SERVER_PID=`ps -ef | grep spiningm_server | grep -v grep | awk '{print $2}'`
 
-sleep 1
+sleep 5
 
 # stats server cpu usage
 pidstat -p $SERVER_PID 1 30
